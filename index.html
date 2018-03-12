@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <!--link to using Google CDN's jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body onload="makeGrid()">
+    <div id='titleBlock'>
+        <p id='projectTitle'>P<span>i</span>xe<span>l</span> A<span>r</span>t M<span>a</span>k<span>e</span>r</p>
+    </div>
+    
+    <h2>Choose Grid Size</h2>
+    <form id="sizePicker" name="pickSize">
+        Grid Height:
+        <input type="number" id="inputHeight" name="height" min="1" max='50' value="15">
+        Grid Width:
+        <input type="number" id="inputWeight" name="width" min="1" max='50' value="15">
+        <button type="submit" id='submitButton' value='Create Grid'>Create Grid</button>
+    </form>
+
+    <h2>Pick A Color</h2>
+    <input type="color" id="colorPicker">
+
+    <h2>Draw Anything You Like</h2>
+    <button id='clearGrid' class='clearButton'>Clear Grid</button>
+    <button id='eraser' class='eraser'>Eraser Off</button>
+    <button id='invertColor' class='invertButton'>Invert Color</button>
+    <button id='gridLines' class='gridButton'>Grid On</button>
+    <br><br>
+    <table id="pixelCanvas"></table>
+
+    <script src="vanillaDesigns.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+body {
+    text-align: center;
+    /* Image by Annie Spratt from Unsplash */
+    background: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+}
+
+html {
+    min-height: 100%;
+}
+
+h1 {
+    font-family: 'Monoton', cursive;
+    font-size: 70px;
+    margin: 0.2em;
+    color: white; 
+    /*text-shadow: 1px 1px black;*/
+}
+
+h2 {
+    margin: 1em 0 0.25em;
+    color: white; 
+    text-shadow: 2px 2px black; 
+    font-family: 'Roboto', sans-serif;
+}
+
+h2:first-of-type {
+    margin-top: 0.5em;
+}
+
+form {
+    color: white; 
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 2px 2px black; 
+}
+
+/* Title neon glow effect inspired by zachsaucier from css-tricks */
+#titleBlock {
+    font-size: 75px;
+    color: cyan;
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    text-transform: uppercase;
+    /* glowing effect */
+    text-shadow: 0 0 80px cyan,0 0 30px DeepSkyBlue,0 0 6px DarkTurquoise;
+}
+
+#titleBlock p {
+    margin: 0;
+}
+
+#projectTitle:hover { 
+    /* tweak text-shadow a little bit on hover for a glowing effect */ 
+    text-shadow: 0 0 100px cyan,0 0 40px DeepSkyBlue,0 0 8px DarkTurquoise;
+}
+
+/* dims the 'i' down, no animation */
+#projectTitle span:nth-of-type(1) {
+    text-shadow: none;
+    opacity: .4;
+}
+
+/* 'r' */
+#projectTitle span:nth-of-type(3) {
+    animation: lower 10s linear infinite; 
+}
+
+/* 'l' */
+#projectTitle span:nth-of-type(2) {
+    animation: upper 11s linear infinite; 
+}
+
+/* 'a' */
+#projectTitle span:nth-of-type(5) {
+    text-shadow: none;
+    opacity: .4;
+}
+
+/* 'r' */
+#projectTitle span:nth-of-type(4) { 
+    animation: upper 12s linear infinite; 
+}
+
+
+/* upper keyframe in charge of different frequency flickering */
+@keyframes upper {
+  0%,19.999%,22%,62.999%,64%, 64.999%,70%,100% {
+    opacity:.99; text-shadow: 0 0 80px cyan,0 0 30px DeepSkyBlue,0 0 6px DarkTurquoise;
+  }
+  20%,21.999%,63%,63.999%,65%,69.999% {
+    opacity:0.4; text-shadow: none; 
+  }
+}
+
+/* lower keyframe in charge of the flickering out animation */
+@keyframes lower {
+  0%,12%,18.999%,23%,31.999%,37%,44.999%,46%,49.999%,51%,58.999%,61%,68.999%,71%,85.999%,96%,100% {
+    opacity:0.99; text-shadow: 0 0 80px cyan,0 0 30px DeepSkyBlue,0 0 6px DarkTurquoise;
+  }
+  19%,22.99%,32%,36.999%,45%,45.999%,50%,50.99%,59%,60.999%,69%,70.999%,86%,95.999% { 
+    opacity:0.4; text-shadow: none; 
+  }
+}
+
+
+table,
+tr,
+td {
+    border: 1px solid black;
+    background-color: white;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    filter: initial;
+    
+}
+
+tr {
+    height: 25px;
+}
+
+td {
+    width: 25px;
+}
+
+
+td:hover {
+    box-shadow: inset 0px 0px 1px 3px cyan ;
+    cursor: pointer;
+}
+
+button {
+    border-radius: 5px;
+    border: none;
+    padding: 8px 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+#submitButton {
+    color: white;
+    background-color: deepskyblue;
+    /* bigger box shadow */
+    box-shadow: 0px 5px #999;
+}
+
+#submitButton:active {
+    /* move button obj down Y plane 4 px */
+    transform: translateY(4px);
+    background-color: aqua;
+    /* smaller box shadow to create a pressed effect */
+    box-shadow: 0px 2px #666;
+}
+
+.eraser {
+    color: white;
+    background-color: #00FF00;
+    box-shadow: 0px 5px #999;
+}
+
+.pressedButton {
+    color: white;
+    transform: translateY(4px);
+    background-color: #00FF66;
+    box-shadow: 0px 2px #666;
+}
+
+.clearButton {
+    color: white;
+    background-color: orangered; 
+    box-shadow: 0px 5px #999;
+}
+
+.clearButton:active {
+    transform: translateY(4px);
+    background-color: #FF0000; 
+    box-shadow: 0px 2px #666;
+}
+
+.invertButton {
+    color: white;
+    background-color: #FF0099; 
+    box-shadow: 0px 5px #999;
+}
+
+.invertButton:active {
+    transform: translateY(4px);
+    background-color: #FF00FF;
+    box-shadow: 0px 2px #666;
+}
+
+.gridButton {
+    color: white;
+    background-color: #9D00FF;
+    box-shadow: 0px 5px #999;
+}
+
+.gridButton:active {
+    transform: translateY(4px);
+    background-color: #CC00FF;
+    box-shadow: 0px 2px #666;
+}
+
+
+input[type=number] {
+    width: 6em;
+}
+
+.inverted {
+    filter: invert(100%);
+}
+
