@@ -163,13 +163,13 @@ clearButton.addEventListener('click', function() {
 var invertButton = document.getElementById('invertColor');
 invertButton.addEventListener('click', function() {
     if (isInverted) {
-        this.innerHTML = 'Invert Color'; 
+        this.textContent = 'Invert Color'; 
         isInverted = false;
         console.log('Colors reverted');
         invertTiles();
     }
     else {
-        this.innerHTML = 'Revert Color'; 
+        this.textContent = 'Revert Color'; 
         isInverted = true;
         console.log('Colors inverted');
         invertTiles();
@@ -201,12 +201,12 @@ gridButton.addEventListener('click', function() {
     if (gridOn) {
         toggleGrid();
         gridOn = false;
-        this.innerHTML = 'Grid Off'; 
+        this.textContent = 'Grid Off'; 
     }
     else {
         toggleGrid();
         gridOn = true;
-        this.innerHTML = 'Grid On';
+        this.textContent = 'Grid On';
     }
 });
 
@@ -234,13 +234,13 @@ eraserButton.addEventListener('click', function() {
         eraserOff = false;
         this.classList.remove('eraser')
         this.classList.add('pressedButton');
-        this.innerHTML = 'Eraser On';
+        this.textContent = 'Eraser On';
     }
     else {
         eraserOff = true;
         this.classList.remove('pressedButton')
         this.classList.add('eraser');
-        this.innerHTML = 'Eraser Off';
+        this.textContent = 'Eraser Off';
     }
 });
 
